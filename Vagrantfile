@@ -18,18 +18,18 @@ Vagrant.configure(API_VERSION) do |config|
 
   config.vm.provision "shell", path: "vagrant/provisioner.sh"
 
-  config.vm.provision "shell", path: "vagrant/timezone.sh"
+  config.vm.provision "shell", path: "vagrant/timezone.sh", run: 'always'
 
-  config.vm.provision "shell", path: "vagrant/apt-get.sh"
+  config.vm.provision "shell", path: "vagrant/apt-get.sh", run: 'always'
 
-  config.vm.provision "shell", path: "vagrant/nginx.sh"
+  config.vm.provision "shell", path: "vagrant/nginx.sh", run: 'always'
 
-  config.vm.provision "shell", path: "vagrant/php.sh"
+  config.vm.provision "shell", path: "vagrant/php.sh", run: 'always'
 
-  config.vm.provision "shell", path: "vagrant/mysql.sh"
+  config.vm.provision "shell", path: "vagrant/mysql.sh", run: 'always'
 
-  config.vm.provision "shell", path: "vagrant/other.sh"
+  config.vm.provision "shell", path: "vagrant/other.sh", run: 'always'
 
-  config.vm.provision "shell", path: "vagrant/clean.sh"
+  config.vm.provision "shell", path: "vagrant/clean.sh", run: 'always'
 
 end
